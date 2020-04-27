@@ -22,6 +22,9 @@
        },
        methods: {
            createNew(){
+               if(this.quote.length < 1){
+                   return alert("You can't write Empty Quote");
+               }
                this.$emit('quoteAdded', this.quote);
                this.quote = '';
            }
